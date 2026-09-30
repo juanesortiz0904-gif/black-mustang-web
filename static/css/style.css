@@ -1,0 +1,1236 @@
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Fondo global para toda la página web y todos los apartados */
+body, html {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #0d0d0d;
+    /* RUTA DEL FONDO GENERAL: reemplaza 'fondo.jpg' por el nombre exacto de tu imagen de fondo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('../images/fondo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.hero-section { 
+    width: 100vw; 
+    height: 100vh; 
+    position: relative; 
+    overflow: hidden;
+}
+
+.logo-container { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    gap: 30px;
+
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 2;
+
+    transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1),
+                opacity 0.6s ease;
+}
+
+.definition-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 88%;
+    max-width: 1000px;
+
+    text-align: center;
+
+    transform: translate(150%, -50%);
+    opacity: 0;
+
+    z-index: 2;
+
+    /* Seguridad para pantallas con poca altura */
+    max-height: 92vh;
+    overflow-y: auto;
+    padding: 10px 20px;
+
+    transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1),
+                opacity 0.7s ease;
+}
+
+.state-panel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 92%;
+    max-width: 1500px;
+
+    text-align: center;
+
+    transform: translate(150%, -50%);
+    opacity: 0;
+
+    z-index: 2;
+
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 20px 30px;
+
+    transition:
+        transform 0.9s cubic-bezier(0.77, 0, 0.175, 1),
+        opacity 0.7s ease;
+}
+
+/* Ocultar visualmente las barras de desplazamiento */
+.definition-panel,
+.state-panel {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.definition-panel::-webkit-scrollbar,
+.state-panel::-webkit-scrollbar {
+    display: none;
+}
+
+.state-content {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+
+    align-items: center;
+
+    text-align: left;
+}
+
+.state-description {
+    width: 100%;
+}
+
+.state-image {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.state-image img {
+    width: 100%;
+    max-width: 620px;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
+}
+
+/* Tabla de probabilidades */
+.state-table {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.state-table table {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.state-table th {
+    color: #d4af37;
+    font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+    font-weight: 800;
+    padding: 16px 18px;
+    text-align: left;
+    border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+}
+
+.state-table td {
+    color: #dddddd;
+    font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+    padding: 15px 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.state-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.state-table td:last-child,
+.state-table th:last-child {
+    text-align: center;
+    font-weight: 700;
+}
+
+.state-table tbody tr {
+    transition: background 0.3s ease;
+}
+
+.state-table tbody tr:hover {
+    background: rgba(212, 175, 55, 0.08);
+}
+
+.legendario-table table {
+    max-width: 680px;
+}
+
+.legendario-table td:first-child {
+    white-space: nowrap;
+}
+
+.cupos-table table {
+    max-width: 680px;
+}
+
+.pagos-table table {
+    max-width: 700px;
+}
+
+/* Ajuste exclusivo para la página del Jackpot */
+.jackpot-content {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.jackpot-description p {
+    line-height: 1.48;
+    margin-bottom: 10px;
+}
+
+.jackpot-description h2 {
+    margin-bottom: 16px;
+}
+
+.jackpot-table table {
+    max-width: 700px;
+}
+
+.jackpot-table th {
+    padding: 12px 14px;
+}
+
+.jackpot-table td {
+    padding: 11px 14px;
+}
+
+.rentabilidad-table table {
+    max-width: 720px;
+}
+
+/* Ajuste exclusivo para la página de pagos */
+.pagos-content {
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.pagos-description p {
+    line-height: 1.48;
+    margin-bottom: 10px;
+}
+
+.pagos-description h2 {
+    margin-bottom: 16px;
+}
+
+.pagos-table th {
+    padding: 13px 16px;
+}
+
+.pagos-table td {
+    padding: 12px 16px;
+}
+
+.pagos-panel .page-navigation {
+    margin-top: 12px;
+}
+ 
+.state-panel h1 {
+    position: relative;
+    display: inline-block;
+
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    font-weight: 900;
+    letter-spacing: clamp(3px, 0.6vw, 8px);
+
+    background: linear-gradient(
+        180deg,
+        #fff8c4 0%,
+        #ffe45c 25%,
+        #d4af37 55%,
+        #a67c1f 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 32px;
+
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.7));
+
+    text-shadow:
+        0 0 8px rgba(255, 223, 80, 0.45),
+        0 0 18px rgba(212, 175, 55, 0.35);
+}
+ 
+.state-panel h1::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: -16px;
+
+    width: 70%;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #d4af37,
+        #ffe45c,
+        #d4af37,
+        transparent
+    );
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.6),
+        0 0 18px rgba(212, 175, 55, 0.25);
+
+    border-radius: 50%;
+}
+
+.state-description p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.7;
+    color: #dddddd;
+
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.page-navigation {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    margin-top: 25px;
+}
+
+.page-navigation .btn-back,
+.page-navigation .btn-state {
+    margin-top: 0;
+    margin-right: 0;
+}
+ 
+.state-description h2{
+    color: #d4af37;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.rotacion-description {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.rotacion-description h2 {
+    color: #d4af37;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.rotacion-description p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.7;
+    color: #dddddd;
+
+    max-width: 900px;
+    margin: 0 auto 18px;
+    text-align: justify;
+}
+
+/* Ajustes exclusivos para la página de Flujo de una ronda completa */
+.flujo-panel {
+    width: 96%;
+    max-width: 1750px;
+}
+
+.rotacion-description.flujo-description {
+    width: 100%;
+    max-width: none;
+}
+
+.rotacion-description.flujo-description p {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: justify;
+}
+
+/* Ajuste exclusivo para la página de Reglas de operación */
+.reglas-description {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.reglas-description p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #dddddd;
+
+    max-width: 1200px;
+    margin: 0 auto 14px;
+
+    text-align: justify;
+}
+
+.reglas-panel .page-navigation {
+    margin-top: 20px;
+}
+
+/* Ajustes exclusivos para la página de Ruleta */
+.ruleta-panel {
+    width: 96%;
+    max-width: 1750px;
+}
+
+.ruleta-intro {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto 28px;
+}
+
+.ruleta-intro p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #dddddd;
+    margin: 0;
+    text-align: center;
+}
+
+.ruleta-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.ruleta-column {
+    width: 100%;
+}
+
+.ruleta-column h2 {
+    color: #d4af37;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.ruleta-column p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #dddddd;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.ruleta-column ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.ruleta-column li {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #dddddd;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.ruleta-column strong {
+    color: #eeeeee;
+}
+
+.ruleta-panel .page-navigation {
+    margin-top: 24px;
+}
+
+/* Ajustes exclusivos para la página de Minas / Diamantes */
+.minas-panel {
+    width: 96%;
+    max-width: 1750px;
+}
+
+.minas-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.minas-column {
+    width: 100%;
+}
+
+.minas-column h2 {
+    color: #d4af37;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.minas-column p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #dddddd;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.minas-column ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.minas-column li {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #dddddd;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.minas-column strong {
+    color: #eeeeee;
+}
+
+.minas-panel .page-navigation {
+    margin-top: 24px;
+}
+
+/* Ajustes exclusivos para la página de Aviator */
+.aviator-panel {
+    width: 96%;
+    max-width: 1750px;
+}
+
+.aviator-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.aviator-column {
+    width: 100%;
+}
+
+.aviator-column h2 {
+    color: #d4af37;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.aviator-column p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #dddddd;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.aviator-column ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.aviator-column li {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #dddddd;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.aviator-column strong {
+    color: #eeeeee;
+}
+
+.aviator-panel .page-navigation {
+    margin-top: 24px;
+}
+
+/* Ajustes exclusivos para la página de Blackjack */
+.blackjack-panel {
+    width: 96%;
+    max-width: 1750px;
+}
+
+.blackjack-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.blackjack-column {
+    width: 100%;
+}
+
+.blackjack-column h2 {
+    color: #d4af37;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.blackjack-column p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #dddddd;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+.blackjack-column ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.blackjack-column li {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #dddddd;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+.blackjack-column strong {
+    color: #eeeeee;
+}
+
+.blackjack-panel .page-navigation {
+    margin-top: 24px;
+}
+
+/* Ajustes exclusivos para la página de Misión y Visión */
+.mision-panel {
+    width: 96%;
+    max-width: 1750px;
+}
+
+.mision-content {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
+
+.mision-section {
+    width: 100%;
+    text-align: center;
+}
+
+.mision-section h2 {
+    color: #d4af37;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.mision-section p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: #dddddd;
+    max-width: 1150px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mision-panel .page-navigation {
+    margin-top: 30px;
+}
+
+.definition-panel h1 {
+    position: relative;
+    display: inline-block;
+
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    font-weight: 900;
+    letter-spacing: clamp(3px, 0.6vw, 8px);
+
+    /* Efecto dorado metálico */
+    background: linear-gradient(
+        180deg,
+        #fff8c4 0%,
+        #ffe45c 25%,
+        #d4af37 55%,
+        #a67c1f 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 32px;
+
+    /* Resplandor dorado */
+    text-shadow:
+        0 0 8px rgba(255, 223, 80, 0.45),
+        0 0 18px rgba(212, 175, 55, 0.35);
+
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.7));
+}
+
+.definition-panel h1::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: -16px;
+
+    width: 70%;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #d4af37,
+        #ffe45c,
+        #d4af37,
+        transparent
+    );
+
+    box-shadow:
+        0 0 8px rgba(212, 175, 55, 0.6),
+        0 0 18px rgba(212, 175, 55, 0.25);
+
+    border-radius: 50%;
+}
+
+.definition-panel p {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.7;
+    color: #dddddd;
+    max-width: 900px;
+    margin: 0 auto 18px;
+    text-align: justify;
+}
+
+.btn-back {
+    margin-top: 0px;
+    background: transparent;
+    color: #d4af37;
+    border: 2px solid #d4af37;
+    padding: 14px 32px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 1px;
+
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    background: #d4af37;
+    color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4);
+}
+
+/* Animación cuando mostramos la definición */
+.hero-section.show-definition .logo-container {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-definition .definition-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-state1 .definition-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-state1 .state1-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-state2 .state1-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-state2 .state2-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-state3 .state2-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-state3 .state3-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-state4 .state3-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-state4 .state4-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-dinamica .state4-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-dinamica .dinamica-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-rotacion .dinamica-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-rotacion .rotacion-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-legendario .rotacion-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-legendario .legendario-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-cupos .legendario-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-cupos .cupos-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-pagos .cupos-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-pagos .pagos-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-rentabilidad .pagos-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-rentabilidad .rentabilidad-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-jackpot .rentabilidad-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-jackpot .jackpot-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-flujo .jackpot-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-flujo .flujo-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-reglas .flujo-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-reglas .reglas-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-ruleta .reglas-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-ruleta .ruleta-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-minas .ruleta-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-minas .minas-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-aviator .minas-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-aviator .aviator-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-blackjack .aviator-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-blackjack .blackjack-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.hero-section.show-mision .blackjack-panel {
+    transform: translate(-150%, -50%);
+    opacity: 0;
+}
+
+.hero-section.show-mision .mision-panel {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+/* Imagen del Logo transparente (PNG sin fondo) */
+.main-logo {
+    max-width: 700px; /* Aumentado de 380px a 580px */
+    width: 90%;
+    height: auto;
+    object-fit: contain;
+    /* Sombra dorada que hace resaltar el logo sobre cualquier fondo */
+    filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.7));
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.main-logo:hover {
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 35px rgba(255, 223, 0, 0.9));
+}
+
+/* Botón "¿Qué es Black Mustang?" */
+.btn-definition {
+    background: linear-gradient(135deg, #d4af37, #ffdf00);
+    color: #000000;
+    font-size: 1.8rem; 
+    font-weight: 800;
+    padding: 24px 60px; /* Aumentado el relleno proporcionalmente */
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.5);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.btn-definition:hover {
+    background: linear-gradient(135deg, #ffffff, #d4af37);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.7);
+}
+
+.btn-state {
+    margin-top: 0px;
+    margin-right: 0px;
+
+    background: linear-gradient(135deg, #d4af37, #ffdf00);
+    color: #000000;
+
+    border: none;
+    padding: 14px 26px;
+    border-radius: 30px;
+
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.btn-state:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 5px 20px rgba(212, 175, 55, 0.5);
+}
+
+@media (max-width: 768px) {
+
+    .flujo-panel {
+        width: 92%;
+        max-width: 1500px;
+    }
+
+    .ruleta-panel {
+        width: 92%;
+        max-width: 1500px;
+    }
+
+    .ruleta-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .ruleta-intro {
+        margin-bottom: 24px;
+    }
+
+    .ruleta-column li {
+        text-align: center;
+    }
+
+    .minas-panel {
+        width: 92%;
+        max-width: 1500px;
+    }
+
+    .minas-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .minas-column li {
+        text-align: center;
+    }
+
+    .aviator-panel {
+        width: 92%;
+        max-width: 1500px;
+    }
+
+    .aviator-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .aviator-column li {
+        text-align: center;
+    }
+
+    .blackjack-panel {
+        width: 92%;
+        max-width: 1500px;
+    }
+
+    .blackjack-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .blackjack-column li {
+        text-align: center;
+    }
+
+    .mision-panel {
+        width: 92%;
+        max-width: 1500px;
+    }
+
+    .mision-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }   
+
+    .logo-container {
+        gap: 20px;
+    }
+
+    .main-logo {
+        width: 95%;
+    }
+
+    .btn-definition {
+        font-size: 1rem;
+        padding: 18px 30px;
+    }
+
+    .definition-panel h1 {
+        letter-spacing: 3px;
+        margin-bottom: 28px;
+    }
+
+    .definition-panel p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .btn-back {
+        margin-top: 20px;
+        padding: 12px 25px;
+    }
+
+    .state-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .state-description {
+        text-align: justify;
+    }
+
+    .state-description p {
+        text-align: center;
+    }
+
+    .state-image {
+        order: 2;
+    }
+
+    .state-table {
+        order: 2;
+    }
+
+    .legendario-table td:first-child {
+        white-space: normal;
+    }
+
+   .page-navigation {
+        gap: 15px;
+    }
+
+    .page-navigation .btn-back,
+    .page-navigation .btn-state {
+        margin-right: 0;
+    }
+}
+
+@media (max-height: 750px) and (min-width: 769px) {
+
+    .definition-panel {
+        width: 90%;
+        max-height: 90vh;
+        padding: 5px 15px;
+    }
+
+    .definition-panel h1,
+    .state-panel h1 {
+        font-size: 3.2rem;
+        margin-bottom: 25px;
+    }
+
+    .definition-panel p,
+    .state-description p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .btn-back {
+        margin-top: 15px;
+        padding: 11px 28px;
+    }
+
+    .state-panel {
+        max-height: 88vh;
+        padding: 10px 20px;
+    }
+
+    .state-content {
+        gap: 30px;
+    }
+
+    .state-description p {
+        font-size: 0.92rem;
+        line-height: 1.45;
+        margin-bottom: 8px;
+    }
+}

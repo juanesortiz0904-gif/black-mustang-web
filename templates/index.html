@@ -1,0 +1,1682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Mustang - Entretenimiento Interactivo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Fuente moderna desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Apartado Principal / Hero Section -->
+    <section class="hero-section">
+        <div class="logo-container">
+            <!-- Imagen del Logo -->
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Black Mustang Logo" class="main-logo">
+            
+            <!-- Botón de acción debajo del logo -->
+            <button class="btn-definition" id="btn-que-es">
+                ¿Qué es Black Mustang?
+            </button>
+        </div>
+            <!-- Pantalla de definición -->
+            <div class="definition-panel" id="definition-panel">
+
+                <h1>BLACK MUSTANG</h1>
+
+            <p>
+                <strong>Black Mustang</strong> es un proyecto de entretenimiento
+                interactivo diseñado para ferias y eventos empresariales, creado para
+                ofrecer una experiencia dinámica y emocionante a los participantes,
+                mientras genera oportunidades de ganancia para los organizadores.
+            </p>
+
+            <p>
+                Su propuesta combina una experiencia visual y sonora de alto impacto,
+                con animaciones, efectos de sonido inmersivos y una interfaz diseñada
+                para captar la atención del público desde el primer momento.
+                El objetivo es crear una experiencia que despierte curiosidad,
+                genere expectativa y motive a las personas a participar.
+            </p>
+
+            <p>
+                El juego principal de Black Mustang es una carrera de caballos
+                interactiva, en la que los participantes pueden elegir un caballo
+                y realizar sus apuestas antes de que comience la carrera.
+                Cada ronda está acompañada por una experiencia visual que busca
+                generar emoción y mantener al público atento hasta conocer el resultado.
+            </p>
+
+            <p>
+                Actualmente, el desarrollo está enfocado en consolidar y perfeccionar
+                la experiencia de la carrera de caballos. A futuro, la plataforma
+                contempla la posibilidad de incorporar nuevos juegos y experiencias
+                para ampliar su propuesta de entretenimiento.
+            </p>
+            
+            <div class="page-navigation">
+
+                <button class="btn-back" id="btn-volver">
+                    VOLVER
+                </button>
+
+                <button class="btn-state" id="btn-estado1">
+                    ESTADO 1 — PANTALLA DE ATRACCIÓN
+                </button>
+
+            </div>
+        </div>
+    <!-- Estado 1 — Pantalla de atracción -->
+    <div class="state-panel state1-panel" id="state1-panel">
+
+                <h1>ESTADO 1</h1>
+
+            <div class="state-content state1-content">
+
+            <!-- Columna izquierda: definición -->
+            <div class="state-description state1-description">
+
+            <h2>PANTALLA DE ATRACCIÓN</h2>
+
+        <p>
+            La pantalla de atracción es el estado que permanece visible cuando
+            no hay una partida en curso. Su función principal es captar la
+            atención del público y despertar su interés por participar en
+            la siguiente ronda.
+        </p>
+
+        <p>
+            En este estado se presenta la identidad visual de Black Mustang,
+            junto con los caballos y otros elementos relacionados con la
+            experiencia. También puede mostrar información de la ronda anterior,
+            como sus últimos resultados, manteniendo la pantalla activa y
+            atractiva mientras no comienza una nueva carrera.
+        </p>
+
+        <p>
+            Además, la pantalla funciona como una invitación visual a participar.
+            Mientras el operador prepara la siguiente partida, el Estado 1 actúa
+            como un gancho pasivo que mantiene la experiencia visible y ayuda
+            a generar nuevos participantes.
+        </p>
+
+        </div>
+
+        <!-- Columna derecha: imagen conceptual -->
+        <div class="state-image state1-image">
+            <img
+                src="{{ url_for('static', filename='images/estado1.png') }}"
+                alt="Representación conceptual del Estado 1 - Pantalla de atracción"
+            >
+        </div>
+
+        </div>
+
+            <!-- Navegación -->
+            <div class="page-navigation">
+
+                <button class="btn-back" id="btn-volver-estado1">
+                    VOLVER
+                </button>
+
+                <button class="btn-state" id="btn-estado2">
+                    ESTADO 2 — REGISTRO DE APUESTAS
+                </button>
+
+            </div>
+    </div>
+        <!-- Estado 2 — Registro de apuestas -->
+    <div class="state-panel state2-panel" id="state2-panel">
+
+        <h1>ESTADO 2</h1>
+
+        <div class="state-content state2-content">
+
+            <!-- Columna izquierda: definición -->
+            <div class="state-description state2-description">
+
+                <h2>REGISTRO DE APUESTAS</h2>
+
+                <p>
+                    El Estado 2 corresponde al registro de participantes y
+                    apuestas antes de iniciar una nueva carrera. En esta etapa,
+                    el operador prepara la partida y organiza la información
+                    de cada participante.
+                </p>
+
+                <p>
+                    Cada participante registra su nombre, selecciona el caballo
+                    de su elección y establece el valor de su apuesta. Esta
+                    información permite organizar la partida y mantener un
+                    control claro de las participaciones.
+                </p>
+
+                <p>
+                    Mientras se realizan los registros, la pantalla puede mostrar
+                    información general de la ronda, como los caballos disponibles
+                    y el valor acumulado de las apuestas, manteniendo al público
+                    informado antes de comenzar la carrera.
+                </p>
+
+            </div>
+
+            <!-- Columna derecha: imagen conceptual -->
+            <div class="state-image state2-image">
+                <img
+                    src="{{ url_for('static', filename='images/estado2.png') }}"
+                    alt="Representación conceptual del Estado 2 - Registro de apuestas"
+                >
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-estado2">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-estado3">
+                ESTADO 3 — CARRERA EN VIVO
+            </button>
+
+        </div>
+    </div>
+            <!-- Estado 3 — Carrera en vivo -->
+    <div class="state-panel state3-panel" id="state3-panel">
+
+        <h1>ESTADO 3</h1>
+
+        <div class="state-content state3-content">
+
+            <!-- Columna izquierda: definición -->
+            <div class="state-description state3-description">
+
+                <h2>CARRERA EN VIVO</h2>
+
+                <p>
+                    El Estado 3 representa el momento estelar de la experiencia
+                    Black Mustang. Una vez finalizado el registro de apuestas,
+                    la pantalla cambia completamente para dar inicio a la carrera,
+                    convirtiendo la partida en un espectáculo visual y sonoro.
+                </p>
+
+                <p>
+                    La pantalla presenta la pista de carreras junto con los cinco
+                    caballos participantes, cada uno identificado mediante su
+                    color y nombre. Durante la competencia, los caballos avanzan
+                    de forma dinámica mientras los efectos de sonido y la ambientación
+                    de hipódromo acompañan el desarrollo de la carrera.
+                </p>
+
+                <p>
+                    La carrera debe desarrollarse durante un tiempo suficiente para
+                    mantener la atención del público, con una duración mínima
+                    aproximada de 20 a 30 segundos. El resultado debe mantenerse
+                    incierto hasta los últimos metros para conservar la tensión
+                    y hacer que el desenlace sea el momento culminante de la ronda.
+                </p>
+
+            </div>
+
+            <!-- Columna derecha: imagen conceptual -->
+            <div class="state-image state3-image">
+                <img
+                    src="{{ url_for('static', filename='images/estado3.png') }}"
+                    alt="Representación conceptual del Estado 3 - Carrera en vivo"
+                >
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-estado3">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-estado4">
+                ESTADO 4 — RESULTADOS
+            </button>
+
+        </div>
+
+    </div>
+            <!-- Estado 4 — Pantalla de resultados -->
+    <div class="state-panel state4-panel" id="state4-panel">
+
+        <h1>ESTADO 4</h1>
+
+        <div class="state-content state4-content">
+
+            <!-- Columna izquierda: definición -->
+            <div class="state-description state4-description">
+
+                <h2>PANTALLA DE RESULTADOS</h2>
+
+                <p>
+                    El Estado 4 aparece inmediatamente después de finalizar
+                    la carrera y presenta el resultado de la ronda de forma
+                    clara, visual y celebratoria.
+                </p>
+
+                <p>
+                    La pantalla muestra el podio con el primer y segundo puesto,
+                    los nombres de los ganadores, lo que recibe cada uno y el
+                    desglose final de la partida.
+                </p>
+
+                <p>
+                    El resultado se acompaña de elementos visuales y sonoros
+                    de celebración, como confeti, efectos y música de victoria,
+                    permaneciendo durante unos segundos antes de regresar al
+                    Estado 1 para iniciar el siguiente ciclo.
+                </p>
+
+            </div>
+
+            <!-- Columna derecha: imagen conceptual -->
+            <div class="state-image state4-image">
+                <img
+                    src="{{ url_for('static', filename='images/estado4.png') }}"
+                    alt="Representación conceptual del Estado 4 - Pantalla de resultados"
+                >
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-estado4">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-dinamica">
+                DINÁMICA MATEMÁTICA Y ESTADÍSTICA
+            </button>
+
+        </div>
+
+    </div>
+            <!-- Dinámica matemática y estadística -->
+    <div class="state-panel dinamica-panel" id="dinamica-panel">
+
+        <h1>DINÁMICA MATEMÁTICA Y ESTADÍSTICA</h1>
+
+        <div class="state-content dinamica-content">
+
+            <!-- Columna izquierda: información -->
+            <div class="state-description dinamica-description">
+
+                <h2>EL SISTEMA DE PROBABILIDADES</h2>
+
+                <p>
+                    El resultado de cada carrera funciona mediante probabilidades
+                    ponderadas. Cada caballo tiene un peso estadístico diferente
+                    que define sus posibilidades de ganar, pero ningún resultado
+                    está garantizado.
+                </p>
+
+                <p>
+                    Esta distribución genera la percepción de que algunos caballos
+                    tienen mayor o menor ventaja, lo que permite al jugador
+                    analizar la situación y tomar una decisión antes de realizar
+                    su apuesta.
+                </p>
+
+                <p>
+                    Las probabilidades base se aplican al primer puesto. Para
+                    determinar el segundo puesto, el sistema recalcula
+                    proporcionalmente las probabilidades entre los caballos
+                    restantes, generando así una clasificación completa de los
+                    cinco participantes.
+                </p>
+
+            </div>
+
+            <!-- Columna derecha: tabla de probabilidades -->
+            <div class="state-table dinamica-table">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Rol en la ronda</th>
+                            <th>Probabilidad de ganar</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Caballo favorito</td>
+                            <td>30%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Caballo fuerte</td>
+                            <td>23%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Caballo intermedio</td>
+                            <td>20%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Caballo débil</td>
+                            <td>17%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Caballo underdog</td>
+                            <td>10%</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-dinamica">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-siguiente-dinamica">
+                ROTACIÓN DE ROLES POR RONDA
+            </button>
+
+        </div>
+
+    </div>
+        <!-- Rotación de roles por ronda -->
+    <div class="state-panel rotacion-panel" id="rotacion-panel">
+
+        <h1>DINÁMICA MATEMÁTICA Y ESTADÍSTICA</h1>
+
+        <div class="rotacion-description">
+
+            <h2>ROTACIÓN DE ROLES POR RONDA</h2>
+
+            <p>
+                Para evitar que un mismo caballo mantenga siempre la misma
+                probabilidad, los roles estadísticos se rotan entre los
+                participantes en cada nueva ronda.
+            </p>
+
+            <p>
+                De esta manera, el caballo que en una ronda ocupa el rol de
+                favorito puede recibir otro rol en la siguiente. Lo mismo
+                ocurre con los demás roles, permitiendo que las posiciones
+                estadísticas cambien continuamente a lo largo de las partidas.
+            </p>
+
+            <p>
+                Esta rotación mantiene la dinámica de las probabilidades y
+                evita que el comportamiento del sistema pueda asociarse
+                permanentemente con un caballo específico. Cada ronda comienza
+                así con una nueva distribución de roles.
+            </p>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-rotacion">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-siguiente-rotacion">
+                EL CABALLO LEGENDARIO
+            </button>
+
+        </div>
+
+    </div>
+        <!-- El caballo legendario -->
+    <div class="state-panel legendario-panel" id="legendario-panel">
+
+        <h1>DINÁMICA MATEMÁTICA Y ESTADÍSTICA</h1>
+
+        <div class="state-content legendario-content">
+
+            <!-- Columna izquierda: información -->
+            <div class="state-description legendario-description">
+
+                <h2>EL CABALLO LEGENDARIO</h2>
+
+                <p>
+                    Cada 4 o 5 rondas, el sistema introduce un evento especial:
+                    la aparición del caballo legendario. Este es un sexto competidor
+                    con identidad visual propia, al que solo una persona puede apostar.
+                    Su aparición incorpora una animación diferente, un color dorado o
+                    plateado y un nombre épico, sumándose de forma extraordinaria a
+                    la carrera de esa ronda.
+                </p>
+
+                <p>
+                    La aparición del caballo legendario debe anunciarse con una
+                    animación especial en pantalla antes del registro de apuestas.
+                    Este efecto busca comunicar al público que la ronda será diferente
+                    y generar un momento adicional de atención y expectativa.
+                </p>
+
+            </div>
+
+            <!-- Columna derecha: tabla del caballo legendario -->
+            <div class="state-table legendario-table">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Probabilidad de ganar</td>
+                            <td>5%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Multiplicador si gana (1er puesto)</td>
+                            <td>×6</td>
+                        </tr>
+
+                        <tr>
+                            <td>Frecuencia de aparición</td>
+                            <td>Cada 4 o 5 rondas</td>
+                        </tr>
+
+                        <tr>
+                            <td>Cupo de apostadores</td>
+                            <td>Máximo 1 persona</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-legendario">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-siguiente-legendario">
+                LÍMITE DE PARTICIPANTES Y ESTRUCTURA DE CUPOS
+            </button>
+
+        </div>
+
+    </div>
+        <!-- Límite de participantes y estructura de cupos -->
+    <div class="state-panel cupos-panel" id="cupos-panel">
+
+        <h1>DINÁMICA MATEMÁTICA Y ESTADÍSTICA</h1>
+
+        <div class="state-content cupos-content">
+
+            <!-- Columna izquierda: información -->
+            <div class="state-description cupos-description">
+
+                <h2>LÍMITE DE PARTICIPANTES Y ESTRUCTURA DE CUPOS</h2>
+
+                <p>
+                    Cada ronda admite un máximo de 10 jugadores, con un límite
+                    de 2 apostadores por caballo. Esta regla permite distribuir
+                    naturalmente las apuestas entre los participantes, reducir
+                    el riesgo de que los pagos superen lo recaudado y generar
+                    competencia por elegir un caballo antes de que se complete
+                    su cupo.
+                </p>
+
+                <p>
+                    En las rondas con caballo legendario, se habilita un cupo
+                    adicional para este sexto competidor, manteniendo el límite
+                    establecido para los cinco caballos principales.
+                </p>
+
+            </div>
+
+            <!-- Columna derecha: tabla de cupos -->
+            <div class="state-table cupos-table">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Caballo</th>
+                            <th>Cupos disponibles</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Caballos 1 al 5</td>
+                            <td>2 por caballo (10 en total)</td>
+                        </tr>
+
+                        <tr>
+                            <td>Caballo legendario</td>
+                            <td>1 cupo adicional</td>
+                        </tr>
+
+                        <tr>
+                            <td>Total jugadores posibles</td>
+                            <td>11 jugadores</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-cupos">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-pagos">
+                SISTEMA DE PAGOS Y PORCENTAJE DEL BOTE
+            </button>
+
+        </div>
+    </div>
+        <!-- Sistema de pagos y porcentaje del bote -->
+    <div class="state-panel pagos-panel" id="pagos-panel">
+
+        <h1>DINÁMICA MATEMÁTICA Y ESTADÍSTICA</h1>
+
+        <div class="state-content pagos-content">
+
+            <!-- Columna izquierda: información -->
+            <div class="state-description pagos-description">
+
+                <h2>SISTEMA DE PAGOS Y PORCENTAJE DEL BOTE</h2>
+
+                <p>
+                    Los pagos se calculan mediante porcentajes fijos del bote total,
+                    no mediante multiplicadores sobre la apuesta individual. Así,
+                    la casa conserva siempre la misma proporción sin importar
+                    cuántos jugadores acierten o cuánto hayan apostado.
+                </p>
+
+                <p>
+                    Solo existen dos puestos ganadores. Si varios jugadores
+                    comparten un puesto, su porcentaje se divide proporcionalmente
+                    según el valor de sus apuestas. El tercer, cuarto y quinto lugar
+                    no reciben recompensa y sus apuestas permanecen íntegramente
+                    en el bote.
+                </p>
+
+                <p>
+                    <strong>Regla especial del caballo legendario:</strong>
+                    solo genera pago si llega en primer lugar, aplicando ×6 sobre
+                    la apuesta de su único apostador. Si llega en cualquier otro
+                    puesto, la apuesta se pierde. Su participación tampoco desplaza
+                    los puestos premiados: el primer y segundo lugar corresponden
+                    siempre a los dos mejores caballos normales.
+                </p>
+
+            </div>
+            <!-- Columna derecha: tabla de pagos -->
+            <div class="state-table pagos-table">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Destino</th>
+                            <th>Porcentaje del bote</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>1er puesto (dividido entre ganadores)</td>
+                            <td>35%</td>
+                        </tr>
+
+                        <tr>
+                            <td>2do puesto (dividido entre ganadores)</td>
+                            <td>27%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ganancia de la casa</td>
+                            <td>38%</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-pagos">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-siguiente-pagos">
+                RENTABILIDAD ESTIMADA POR HORA
+            </button>
+
+        </div>
+
+    </div>
+        <!-- Rentabilidad estimada por hora -->
+    <div class="state-panel rentabilidad-panel" id="rentabilidad-panel">
+
+        <h1>DINÁMICA MATEMÁTICA Y ESTADÍSTICA</h1>
+
+        <div class="state-content rentabilidad-content">
+
+            <!-- Columna izquierda: información -->
+            <div class="state-description rentabilidad-description">
+
+                <h2>RENTABILIDAD ESTIMADA POR HORA</h2>
+
+                <p>
+                    Con rondas de aproximadamente 4 minutos, en una hora de operación
+                    se pueden completar entre 12 y 15 rondas. Con 10 jugadores que
+                    apuesten $5.000 por ronda y un margen del 38%, la ganancia estimada
+                    es de $228.000 a $285.000 COP por hora en el escenario base.
+                </p>
+
+                <p>
+                    En las rondas con caballo legendario activo y 11 jugadores,
+                    la ganancia aumenta proporcionalmente al bote total de esa ronda.
+                </p>
+
+            </div>
+
+            <!-- Columna derecha: tabla de duración -->
+            <div class="state-table rentabilidad-table">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Fase de la ronda</th>
+                            <th>Duración estimada</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Registro de apuestas</td>
+                            <td>2 a 3 minutos</td>
+                        </tr>
+
+                        <tr>
+                            <td>Carrera animada</td>
+                            <td>30 a 45 segundos</td>
+                        </tr>
+
+                        <tr>
+                            <td>Pantalla de resultados</td>
+                            <td>30 segundos</td>
+                        </tr>
+
+                        <tr>
+                            <td>Transición</td>
+                            <td>30 segundos</td>
+                        </tr>
+
+                        <tr>
+                            <td>Total por ronda</td>
+                            <td>Aprox. 4 minutos</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-rentabilidad">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-siguiente-rentabilidad">
+                EL POZO ACUMULADO (JACKPOT)
+            </button>
+
+        </div>
+
+    </div>
+            <!-- El pozo acumulado (Jackpot) -->
+    <div class="state-panel jackpot-panel" id="jackpot-panel">
+
+        <h1>DINÁMICA MATEMÁTICA Y ESTADÍSTICA</h1>
+
+        <div class="state-content jackpot-content">
+
+            <!-- Columna izquierda: información -->
+            <div class="state-description jackpot-description">
+
+                <h2>EL POZO ACUMULADO (JACKPOT)</h2>
+
+                <p>
+                    El pozo acumulado es un mecanismo que se activa automáticamente
+                    cuando nadie apuesta al caballo que gana el primer puesto en una
+                    ronda. En lugar de que ese 35% vaya directamente a la casa, el
+                    sistema lo reserva en un fondo separado que se muestra visualmente
+                    en pantalla y crece ronda a ronda, generando un efecto de atracción
+                    masiva sobre el público. Durante las rondas de acumulación, el pozo 
+                    aparece prominentemente en la pantalla de atracción y en la pantalla de 
+                    registro.
+                </p>
+
+                <p>
+                    <strong>Ronda final — la última oportunidad:</strong>
+                    Al llegar a la cuarta ronda sin que el pozo haya sido ganado,
+                    el sistema activa automáticamente un anuncio especial en pantalla
+                    antes del registro de apuestas. En esta ronda, el pozo acumulado se 
+                    suma al 35% normal del primer puesto. Si en la ronda final tampoco hay 
+                    apostadores al caballo ganador del primer puesto, el pozo acumulado 
+                    completo pasa íntegramente a la casa.
+                </p>
+            </div>
+
+            <!-- Columna derecha: tabla del pozo acumulado -->
+            <div class="state-table jackpot-table">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Ronda</th>
+                            <th>Situación</th>
+                            <th>Lo que ocurre</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Ronda 1</td>
+                            <td>Nadie apostó al ganador</td>
+                            <td>El 35% se guarda en el pozo — aparece en pantalla</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ronda 2</td>
+                            <td>Nadie apostó al ganador</td>
+                            <td>El nuevo 35% se suma al pozo — el número crece</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ronda 3</td>
+                            <td>Nadie apostó al ganador</td>
+                            <td>El nuevo 35% se suma al pozo — el número es grande</td>
+                        </tr>
+
+                        <tr>
+                            <td>Ronda 4</td>
+                            <td>Ronda final de oportunidad</td>
+                            <td>El sistema anuncia la última oportunidad de ganar el pozo</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-jackpot">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-flujo-ronda">
+                FLUJO DE UNA RONDA COMPLETA
+            </button>
+
+        </div>
+    </div>
+            <!-- Flujo de una ronda completa -->
+    <div class="state-panel flujo-panel" id="flujo-panel">
+
+        <h1>FLUJO DE UNA RONDA COMPLETA</h1>
+
+        <div class="rotacion-description flujo-description">
+
+            <p>
+                <strong>Paso 1 — Convocatoria (durante el estado de atracción):</strong>
+                Mientras la pantalla muestra el estado idle (pantalla de atracción)
+                con el logo y las animaciones de Black Mustang, el animador se dirige
+                al público para invitar participantes a la siguiente ronda. Explica
+                brevemente las reglas, menciona el monto mínimo de apuesta y genera
+                expectativa. Este paso no debe tomar más de 2 minutos.
+            </p>
+
+            <p>
+                <strong>Paso 2 — Registro de apuestas:</strong>
+                Una vez confirmados los jugadores, el asistente de registro recolecta
+                la información de cada uno: nombre, caballo elegido y monto a apostar.
+                Simultáneamente el cajero recibe el dinero físico de cada participante
+                y lo verifica. El operador principal ingresa los datos al sistema en
+                tiempo real. Si la ronda corresponde a una aparición del caballo
+                legendario, el animador lo anuncia con anticipación para generar
+                expectativa y se define quién obtiene el cupo único antes de iniciar
+                el registro.
+            </p>
+
+            <p>
+                <strong>Paso 3 — Confirmación e inicio:</strong>
+                El operador principal verifica que todos los datos estén correctamente
+                ingresados y que el cajero haya recibido el dinero completo. Una vez
+                confirmado, el animador hace el anuncio de largada y el operador
+                presiona el botón de inicio. La pantalla transiciona al estado de
+                carrera en vivo.
+            </p>
+
+            <p>
+                <strong>Paso 4 — La carrera:</strong>
+                Durante los 30 a 45 segundos que dura la animación, el equipo no
+                interviene en el sistema. Este es el momento del animador: narrar la
+                carrera en voz alta, generar tensión, reaccionar a los momentos de la
+                pista y mantener al público completamente enganchado en la pantalla.
+            </p>
+
+            <p>
+                <strong>Paso 5 — Resultados y pagos:</strong>
+                Al finalizar la carrera, la pantalla muestra automáticamente el podio
+                y el desglose de pagos. El cajero toma esa información como referencia
+                exacta para entregar los premios a los ganadores de inmediato. Los
+                perdedores no reciben devolución. El dinero restante queda en manos del
+                equipo como ganancia de la ronda.
+            </p>
+
+            <p>
+                <strong>Paso 6 — Cierre de ronda y reinicio:</strong>
+                El operador reinicia el sistema al estado de atracción y el ciclo
+                comienza nuevamente desde el paso 1. El equipo debe procurar que el
+                tiempo entre rondas sea el mínimo posible para mantener el ritmo y
+                el ambiente activo.
+            </p>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-flujo">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-reglas-operacion">
+                REGLAS DE OPERACIÓN
+            </button>
+
+        </div>
+
+    </div>
+    <!-- Reglas de operación -->
+    <div class="state-panel reglas-panel" id="reglas-panel">
+
+        <h1>REGLAS DE OPERACIÓN</h1>
+
+        <div class="reglas-description">
+
+            <p>
+                Para garantizar transparencia y evitar conflictos con los participantes,
+                el equipo debe tener claras y comunicar las siguientes reglas antes de
+                cada ronda:
+            </p>
+
+            <p>
+                • Las apuestas son definitivas una vez registradas en el sistema y
+                entregado el dinero. No hay devoluciones por cambio de opinión.
+            </p>
+
+            <p>
+                • El monto mínimo de apuesta por jugador es de $1.000 COP.
+            </p>
+
+            <p>
+                • El monto máximo de apuesta por jugador es de $5.000 COP.
+            </p>
+
+            <p>
+                • Se requiere un mínimo de 5 jugadores para iniciar una carrera.
+                Con menos participantes el bote no es suficiente para que los ganadores
+                reciban una recompensa que valga la pena, lo que afecta negativamente
+                la experiencia de todos.
+            </p>
+
+            <p>
+                • Solo se admiten máximo 2 jugadores por caballo y 1 jugador por el
+                caballo legendario cuando aparece.
+            </p>
+
+            <p>
+                • El resultado de la carrera es determinado por el sistema
+                automáticamente y es inapelable.
+            </p>
+
+            <p>
+                • Los premios se entregan inmediatamente al finalizar cada ronda
+                según lo indicado en pantalla.
+            </p>
+
+            <p>
+                • Cuando el pozo acumulado está activo su monto es visible en pantalla
+                en todo momento. El pozo se entrega al ganador del primer puesto que
+                haya apostado a ese caballo. Si nadie apostó al ganador en la ronda
+                final el pozo pasa a la casa — esta regla debe comunicarse claramente
+                al público antes de cada ronda con pozo activo.
+            </p>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-reglas">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-ruleta">
+                RULETA
+            </button>
+
+        </div>
+
+    </div>
+        <!-- Ruleta -->
+    <div class="state-panel ruleta-panel" id="ruleta-panel">
+
+        <h1>RULETA</h1>
+
+        <!-- Introducción general -->
+        <div class="ruleta-intro">
+            <p>
+                A continuación, se presentan los demás juegos que también se están
+                desarrollando como parte de Black Mustang, además del hipódromo
+                (carrera de caballos): la ruleta, minas/diamantes, Aviator y, por
+                último, el blackjack (veintiuno).
+            </p>
+        </div>
+
+        <!-- Información en dos columnas -->
+        <div class="state-content ruleta-content">
+
+            <!-- Columna izquierda -->
+            <div class="state-description ruleta-column">
+
+                <h2>¿QUÉ ES Y CÓMO FUNCIONA?</h2>
+
+                <p>
+                    La Ruleta consta de un cilindro con 37 casillas numeradas del
+                    0 al 36. El número 0 es de color verde, mientras que los
+                    números del 1 al 36 se dividen equitativamente entre rojo y
+                    negro (18 rojos y 18 negros).
+                </p>
+
+                <p>
+                    Los jugadores realizan apuestas sobre un tapete antes de que
+                    la bola gire. Las apuestas pueden ser:
+                </p>
+
+                <ul>
+                    <li>
+                        <strong>Sencillas (Suertes Exteriores):</strong>
+                        Rojo/Negro, Par/Impar, Falta/Pasa (1-18 / 19-36).
+                        Pagan 1:1.
+                    </li>
+
+                    <li>
+                        <strong>Múltiples (Interiores):</strong>
+                        Pleno (un solo número, paga 35:1), Pareja/Split
+                        (2 números, paga 17:1), Calle (3 números, paga 11:1),
+                        Cuadro (4 números, paga 8:1), Seisena (6 números,
+                        paga 5:1).
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="state-description ruleta-column">
+
+                <h2>MATEMÁTICAS Y ESTADÍSTICA (EN PALABRAS SIMPLES)</h2>
+
+                <ul>
+                    <li>
+                        <strong>El Efecto del Cero (Ventaja de la Casa):</strong>
+                        La presencia de un único cero (0) es la clave matemática
+                        del casino. Aunque hay 37 números posibles, una apuesta
+                        ganadora a un número individual paga 35 a 1, más la
+                        devolución de la apuesta, lo que equivale a 36 unidades.
+                    </li>
+
+                    <li>
+                        <strong>Retorno al Jugador (RTP) Fijo:</strong>
+                        La ventaja de la casa es exactamente
+                        <strong>1/37 ≈ 2.70%</strong>, lo que otorga un RTP teórico
+                        constante de <strong>97.30%</strong> para casi todas las
+                        apuestas disponibles.
+                    </li>
+
+                    <li>
+                        <strong>Independencia de Eventos:</strong>
+                        Cada giro del cilindro es un evento independiente.
+                        Los resultados anteriores no influyen en los futuros
+                        (la llamada "falacia del jugador").
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-ruleta">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-minas">
+                MINAS/DIAMANTES
+            </button>
+
+        </div>
+
+    </div>
+        <!-- Minas / Diamantes -->
+    <div class="state-panel minas-panel" id="minas-panel">
+
+        <h1>MINAS/DIAMANTES</h1>
+
+        <div class="state-content minas-content">
+
+            <!-- Columna izquierda -->
+            <div class="state-description minas-column">
+
+                <h2>¿QUÉ ES Y CÓMO FUNCIONA?</h2>
+
+                <p>
+                    Minas es un juego de revelar casillas sobre un tablero de
+                    cuadrícula, típicamente de 5×5, para un total de 25 casillas.
+                    Antes de comenzar, el jugador selecciona la cantidad de minas
+                    ocultas en el tablero, por ejemplo, entre 1 y 24 minas.
+                </p>
+
+                <p>
+                    El objetivo es destapar casillas una a una evitando las minas.
+                    Cada casilla revelada que contiene un diamante incrementa el
+                    multiplicador acumulado sobre la apuesta inicial.
+                </p>
+
+                <p>
+                    El jugador puede decidir retirar sus ganancias
+                    (<strong>Cash Out</strong>) en cualquier momento antes de
+                    golpear una mina. Si revela una casilla con mina, pierde la
+                    totalidad de la apuesta y la ronda finaliza.
+                </p>
+
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="state-description minas-column">
+
+                <h2>MATEMÁTICAS Y ESTADÍSTICA (EN PALABRAS SIMPLES)</h2>
+
+                <ul>
+
+                    <li>
+                        <strong>Probabilidad Cambiante:</strong>
+                        A diferencia de la ruleta, la probabilidad de éxito en
+                        Minas cambia con cada clic. Al inicio, con 3 minas en
+                        25 casillas, la probabilidad de acertar el primer
+                        diamante es de 22/25 (88%). Si se acierta, quedan
+                        24 casillas y 22 diamantes, por lo que el segundo clic
+                        tiene una probabilidad de 22/24 (91,67%).
+                    </li>
+
+                    <li>
+                        <strong>Escalamiento del Multiplicador:</strong>
+                        El multiplicador aumenta de forma progresiva a medida
+                        que quedan menos casillas seguras. Este cálculo se basa
+                        en la inversa de la probabilidad acumulada, combinada
+                        con el margen de beneficio de la casa
+                        (<em>House Edge</em>).
+                    </li>
+
+                    <li>
+                        <strong>Retorno al Jugador (RTP):</strong>
+                        Típicamente se sitúa entre el 95% y el 98%, dependiendo
+                        de la regla de margen fijada por el casino en cada paso
+                        de retiro.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-minas">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-aviator">
+                AVIATOR
+            </button>
+
+        </div>
+
+    </div>
+        <!-- Aviator (Juego Crash) -->
+    <div class="state-panel aviator-panel" id="aviator-panel">
+
+        <h1>AVIATOR (JUEGO CRASH)</h1>
+
+        <div class="state-content aviator-content">
+
+            <!-- Columna izquierda -->
+            <div class="state-description aviator-column">
+
+                <h2>¿QUÉ ES Y CÓMO FUNCIONA?</h2>
+
+                <p>
+                    Aviator es un juego de tipo Crash con dinámica de curva
+                    ascendente. Una avioneta despega y hace crecer un multiplicador
+                    que inicia en 1.00x y va aumentando progresivamente a medida
+                    que el avión asciende.
+                </p>
+
+                <p>
+                    El jugador debe realizar su apuesta antes del despegue y
+                    presionar el botón de retiro (<strong>Cashout</strong>) antes
+                    de que la avioneta salga volando espontáneamente
+                    (<strong>Crash</strong>).
+                </p>
+
+                <p>
+                    Si logra retirarse a tiempo, gana su apuesta multiplicada por
+                    el valor mostrado al momento del retiro. Si el avión se va
+                    antes de ejecutar el retiro, pierde el dinero apostado.
+                </p>
+
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="state-description aviator-column">
+
+                <h2>MATEMÁTICAS Y ESTADÍSTICA (EN PALABRAS SIMPLES)</h2>
+
+                <ul>
+
+                    <li>
+                        <strong>Distribución Exponencial / Inversa:</strong>
+                        El punto de colisión no se elige uniformemente. Se utiliza
+                        una distribución probabilística donde los multiplicadores
+                        bajos (1.01x - 1.50x) ocurren muy frecuentemente, mientras
+                        que los multiplicadores altos (100x +) ocurren con menor
+                        frecuencia.
+                    </li>
+
+                    <li>
+                        <strong>Colisión Instantánea (0x o 1.00x):</strong>
+                        En un pequeño porcentaje de las partidas (frecuentemente
+                        cerca del 1% al 3%), el juego termina en 1.00x de manera
+                        inmediata, asegurando la ventaja estadística de la casa
+                        sin posibilidad de retiro previo.
+                    </li>
+
+                    <li>
+                        <strong>RTP Promedio:</strong>
+                        Suele configurarse en un <strong>97.00%</strong>.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-aviator">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-blackjack">
+                BLACKJACK
+            </button>
+
+        </div>
+
+    </div>
+        <!-- Blackjack (Veintiuno) -->
+    <div class="state-panel blackjack-panel" id="blackjack-panel">
+
+        <h1>BLACKJACK (VEINTIUNO)</h1>
+
+        <div class="state-content blackjack-content">
+
+            <!-- Columna izquierda -->
+            <div class="state-description blackjack-column">
+
+                <h2>¿QUÉ ES Y CÓMO FUNCIONA?</h2>
+
+                <p>
+                    El Blackjack es un juego de cartas donde los jugadores compiten
+                    individualmente contra el crupier. El objetivo es obtener una
+                    mano cuyo valor sumado sea lo más cercano posible a 21, sin
+                    pasarse.
+                </p>
+
+                <ul>
+
+                    <li>
+                        <strong>Valores de las cartas:</strong>
+                        Del 2 al 10 valen su número; J, Q y K valen 10;
+                        el As puede valer 1 o 11 según convenga.
+                    </li>
+
+                    <li>
+                        <strong>Desarrollo:</strong>
+                        Cada jugador y el crupier reciben dos cartas
+                        (una del crupier queda oculta). El jugador puede decidir
+                        entre Pedir (<em>Hit</em>), Plantarse (<em>Stand</em>),
+                        Doblar (<em>Double Down</em>) o Dividir (<em>Split</em>)
+                        si tiene una pareja.
+                    </li>
+
+                    <li>
+                        <strong>Regla del Crupier:</strong>
+                        El crupier está obligado a pedir carta con 16 o menos
+                        y a plantarse con 17 o más.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="state-description blackjack-column">
+
+                <h2>MATEMÁTICAS Y ESTADÍSTICA (EN PALABRAS SIMPLES)</h2>
+
+                <ul>
+
+                    <li>
+                        <strong>Dependencia de Eventos (Memoria):</strong>
+                        A diferencia de la ruleta, el Blackjack tiene memoria.
+                        Extraer un As reduce la probabilidad de sacar otro As
+                        en la misma ronda. Esto permite la existencia de
+                        estrategias avanzadas como el conteo de cartas.
+                    </li>
+
+                    <li>
+                        <strong>Ventaja de la Casa y Estrategia Básica:</strong>
+                        Aplicando la "Estrategia Básica", un modelo matemático
+                        perfeccionado mediante simulaciones Monte Carlo, la
+                        ventaja de la casa se reduce a tan solo 0.5%
+                        (RTP del 99.5%).
+                    </li>
+
+                    <li>
+                        <strong>Riesgo de Quebrarse (Bust):</strong>
+                        Pedir carta con un total de 12 o más conlleva un riesgo
+                        directo de superar 21. Por ejemplo, con 16 puntos, la
+                        probabilidad de pasarse al pedir una carta adicional es
+                        cercana al 62%.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-blackjack">
+                VOLVER
+            </button>
+
+            <button class="btn-state" id="btn-mision-vision">
+                MISIÓN Y VISIÓN
+            </button>
+
+        </div>
+
+    </div>
+        </div>
+
+    <!-- Misión y Visión -->
+    <div class="state-panel mision-panel" id="mision-panel">
+
+        <h1>MISIÓN Y VISIÓN</h1>
+
+            <div class="mision-content">
+
+            <!-- Misión -->
+            <div class="mision-section">
+
+                <h2>MISIÓN</h2>
+
+                <p>
+                    En BLACK MUSTANG, estamos construyendo un ecosistema de apuestas
+                    de clase nacional. Nuestro objetivo actual es desarrollar una
+                    infraestructura tecnológica sólida que integre datos en tiempo real,
+                    garantice la seguridad de las operaciones y fomente el crecimiento
+                    de la comunidad hípica a través de alianzas estratégicas y prácticas
+                    éticas.
+                </p>
+
+            </div>
+
+            <!-- Visión -->
+            <div class="mision-section">
+
+                <h2>VISIÓN</h2>
+
+                <p>
+                    Brindar entretenimiento seguro y emocionante a todos los rincones
+                    de Colombia a través de apuestas físicas innovadoras, operando con
+                    absoluta transparencia, tecnología avanzada y un firme compromiso
+                    con el juego responsable.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="page-navigation">
+
+            <button class="btn-back" id="btn-volver-mision">
+                VOLVER
+            </button>
+
+        </div>
+
+    </div>
+    </section>
+
+    <script>
+        const btn = document.getElementById('btn-que-es');
+        const btnVolver = document.getElementById('btn-volver');
+        const heroSection = document.querySelector('.hero-section');
+        const btnEstado1 = document.getElementById('btn-estado1');
+        const btnVolverEstado1 = document.getElementById('btn-volver-estado1');
+        const btnEstado2 = document.getElementById('btn-estado2');
+        const btnVolverEstado2 = document.getElementById('btn-volver-estado2');
+        const btnEstado3 = document.getElementById('btn-estado3');
+        const btnVolverEstado3 = document.getElementById('btn-volver-estado3');
+        const btnEstado4 = document.getElementById('btn-estado4');
+        const btnVolverEstado4 = document.getElementById('btn-volver-estado4');
+        const btnDinamica = document.getElementById('btn-dinamica');
+        const btnVolverDinamica = document.getElementById('btn-volver-dinamica');   
+        const btnSiguienteDinamica = document.getElementById('btn-siguiente-dinamica');
+        const btnVolverRotacion = document.getElementById('btn-volver-rotacion');
+        const btnSiguienteRotacion = document.getElementById('btn-siguiente-rotacion');
+        const btnVolverLegendario = document.getElementById('btn-volver-legendario');
+        const btnSiguienteLegendario = document.getElementById('btn-siguiente-legendario');
+        const btnVolverCupos = document.getElementById('btn-volver-cupos');
+        const btnPagos = document.getElementById('btn-pagos');
+        const btnVolverPagos = document.getElementById('btn-volver-pagos');
+        const btnSiguientePagos = document.getElementById('btn-siguiente-pagos');
+        const btnVolverRentabilidad = document.getElementById('btn-volver-rentabilidad');
+        const btnSiguienteRentabilidad = document.getElementById('btn-siguiente-rentabilidad');
+        const btnVolverJackpot = document.getElementById('btn-volver-jackpot');
+        const btnFlujoRonda = document.getElementById('btn-flujo-ronda');
+        const btnVolverFlujo = document.getElementById('btn-volver-flujo');
+        const btnReglasOperacion = document.getElementById('btn-reglas-operacion');
+        const btnVolverReglas = document.getElementById('btn-volver-reglas');
+        const btnRuleta = document.getElementById('btn-ruleta');
+        const btnVolverRuleta = document.getElementById('btn-volver-ruleta');
+        const btnMinas = document.getElementById('btn-minas');
+        const btnVolverMinas = document.getElementById('btn-volver-minas');
+        const btnAviator = document.getElementById('btn-aviator');
+        const btnVolverAviator = document.getElementById('btn-volver-aviator');
+        const btnBlackjack = document.getElementById('btn-blackjack');
+        const btnVolverBlackjack = document.getElementById('btn-volver-blackjack');
+        const btnMisionVision = document.getElementById('btn-mision-vision');
+        const btnVolverMision = document.getElementById('btn-volver-mision');
+
+        // Mostrar definición
+        btn.onclick = function() {
+            heroSection.classList.add('show-definition');
+        };
+
+        // Volver al inicio
+        btnVolver.onclick = function() {
+            heroSection.classList.remove('show-definition');
+        };
+
+        // Mostrar Estado 1
+        btnEstado1.onclick = function() {
+            heroSection.classList.add('show-state1');
+        };
+
+        // Volver desde Estado 1
+        btnVolverEstado1.onclick = function() {
+            heroSection.classList.remove('show-state1');
+        };
+
+        // Mostrar Estado 2
+        btnEstado2.onclick = function() {
+            heroSection.classList.add('show-state2');
+        };
+
+        // Volver desde Estado 2
+        btnVolverEstado2.onclick = function() {
+            heroSection.classList.remove('show-state2');
+        };
+
+        // Mostrar Estado 3
+        btnEstado3.onclick = function() {
+            heroSection.classList.add('show-state3');
+        };
+
+        // Volver desde Estado 3
+        btnVolverEstado3.onclick = function() {
+            heroSection.classList.remove('show-state3');
+        };
+
+        // Mostrar Estado 4
+        btnEstado4.onclick = function() {
+            heroSection.classList.add('show-state4');
+        };
+
+        // Volver desde Estado 4
+        btnVolverEstado4.onclick = function() {
+            heroSection.classList.remove('show-state4');
+        };
+
+        // Mostrar Dinámica matemática y estadística
+        btnDinamica.onclick = function() {
+        heroSection.classList.add('show-dinamica');
+        };
+
+        // Volver desde Dinámica matemática y estadística
+        btnVolverDinamica.onclick = function() {
+            heroSection.classList.remove('show-dinamica');
+        };
+
+        // Mostrar Rotación de roles por ronda
+        btnSiguienteDinamica.onclick = function() {
+            heroSection.classList.add('show-rotacion');
+        };
+
+        // Volver desde Rotación de roles por ronda
+        btnVolverRotacion.onclick = function() {
+            heroSection.classList.remove('show-rotacion');
+        };
+
+        // Mostrar El caballo legendario
+        btnSiguienteRotacion.onclick = function() {
+            heroSection.classList.add('show-legendario');
+        };
+
+        // Volver desde El caballo legendario
+        btnVolverLegendario.onclick = function() {
+            heroSection.classList.remove('show-legendario');
+        };
+
+        // Mostrar Límite de participantes y estructura de cupos
+        btnSiguienteLegendario.onclick = function() {
+            heroSection.classList.add('show-cupos');
+        };
+
+        // Volver desde Límite de participantes y estructura de cupos
+        btnVolverCupos.onclick = function() {
+            heroSection.classList.remove('show-cupos');
+        };
+
+        // Mostrar Sistema de pagos y porcentaje del bote
+        btnPagos.onclick = function() {
+            heroSection.classList.add('show-pagos');
+        };
+
+        // Volver desde Sistema de pagos y porcentaje del bote
+        btnVolverPagos.onclick = function() {
+            heroSection.classList.remove('show-pagos');
+        };
+
+        // Mostrar Rentabilidad estimada por hora
+        btnSiguientePagos.onclick = function() {
+            heroSection.classList.add('show-rentabilidad');
+        };
+
+        // Volver desde Rentabilidad estimada por hora
+        btnVolverRentabilidad.onclick = function() {
+            heroSection.classList.remove('show-rentabilidad');
+        };
+
+        // Mostrar El pozo acumulado (Jackpot)
+        btnSiguienteRentabilidad.onclick = function() {
+            heroSection.classList.add('show-jackpot');
+        };
+
+        // Volver desde El pozo acumulado (Jackpot)
+        btnVolverJackpot.onclick = function() {
+            heroSection.classList.remove('show-jackpot');
+        };
+
+        // Mostrar Flujo de una ronda completa
+        btnFlujoRonda.onclick = function() {
+            heroSection.classList.add('show-flujo');
+        };
+
+        // Volver desde Flujo de una ronda completa
+        btnVolverFlujo.onclick = function() {
+            heroSection.classList.remove('show-flujo');
+        };
+
+        // Mostrar Reglas de operación
+        btnReglasOperacion.onclick = function() {
+            heroSection.classList.add('show-reglas');
+        };
+
+        // Volver desde Reglas de operación
+        btnVolverReglas.onclick = function() {
+            heroSection.classList.remove('show-reglas');
+        };
+
+        // Mostrar Ruleta
+        btnRuleta.onclick = function() {
+            heroSection.classList.add('show-ruleta');
+        };
+
+        // Volver desde Ruleta
+        btnVolverRuleta.onclick = function() {
+            heroSection.classList.remove('show-ruleta');
+        };
+
+        // Mostrar Minas / Diamantes
+        btnMinas.onclick = function() {
+            heroSection.classList.add('show-minas');
+        };
+
+        // Volver desde Minas / Diamantes
+        btnVolverMinas.onclick = function() {
+            heroSection.classList.remove('show-minas');
+        };
+
+        // Mostrar Aviator
+        btnAviator.onclick = function() {
+            heroSection.classList.add('show-aviator');
+        };
+
+        // Volver desde Aviator
+        btnVolverAviator.onclick = function() {
+            heroSection.classList.remove('show-aviator');
+        };
+
+        // Mostrar Blackjack
+        btnBlackjack.onclick = function() {
+            heroSection.classList.add('show-blackjack');
+        };
+
+        // Volver desde Blackjack
+        btnVolverBlackjack.onclick = function() {
+            heroSection.classList.remove('show-blackjack');
+        };
+
+        // Mostrar Misión y Visión
+        btnMisionVision.onclick = function() {
+            heroSection.classList.add('show-mision');
+        };
+
+        // Volver desde Misión y Visión
+        btnVolverMision.onclick = function() {
+            heroSection.classList.remove('show-mision');
+        };
+    </script>
+</body>
+</html>
